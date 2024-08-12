@@ -30,8 +30,8 @@ if (!isset($_SESSION['usuario_id'])) {
 
     <h1>Armazenador de Arquivos:</h1>
 
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="image" accept="image/*" class="file_customizada">
+    <form action="upload_arquivo.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="file/*" class="file_customizada">
         <button type="submit">Enviar Arquivo</button>
     </form>
 

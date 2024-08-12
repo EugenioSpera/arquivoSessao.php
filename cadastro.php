@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {//verifica se o metodo enviado é POS
         echo " Cadastro realizado com sucesso ";
 
     } else {
-        echo "Erro: " .$sql. "<br>".mysqli_error($conn);
+        echo "Erro: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
 
@@ -29,16 +29,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {//verifica se o metodo enviado é POS
 
 <body>
 
-<div class="container-inicial" > 
-
-    <form method="post">
-        Nome: <input type="text" name="nome" required><br><br>
-        Email: <input type="email" name="email" required><br><br>
-        Senha: <input type="password" name="senha" required><br><br>
-        <input type="submit" value="Cadastrar">
+    <nav>
         <a href="index.php" class="voltar-link">Home</a>
+    </nav>
 
-    </form>
+    <div class="container-inicial">
+
+        <div class="container-cad">
+
+
+            <form method="post">
+                Nome: <input type="text" name="nome" required><br><br>
+                Email: <input type="email" name="email" required><br><br>
+                Senha: <input type="password" name="senha" required><br><br>
+                <input type="submit" value="Cadastrar">
+
+            </form>
+
+        </div>
 
     </div>
 

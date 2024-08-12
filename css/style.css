@@ -1,10 +1,13 @@
+
+
 .container-inicial{
-    margin: 0;
-    padding: 0;
+    margin-top: -500px;
+    padding-top: 200px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;    
+    height: 120vh;    
     font-family: Arial, sans-serif;
     background-image: url(https://img.freepik.com/fotos-gratis/close-up-jovem-a-procura-de-vinis-na-loja_23-2148237245.jpg?t=st=1722971905~exp=1722975505~hmac=46ae9b8541ab8bd45d00c512b1af925d61872fc0a6bd5b02c4af49d77621b486&w=1380);
     background-position: center;
@@ -13,7 +16,7 @@
  }
 
 
-
+/*------------------------------------------------index----------------------------------------------*/
 
 .container{
     background: white;
@@ -25,6 +28,50 @@
     
 
 }
+.container-login{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;    
+    font-family: Arial, sans-serif;
+    background-image: url(https://img.freepik.com/fotos-gratis/close-up-jovem-a-procura-de-vinis-na-loja_23-2148237245.jpg?t=st=1722971905~exp=1722975505~hmac=46ae9b8541ab8bd45d00c512b1af925d61872fc0a6bd5b02c4af49d77621b486&w=1380);
+    background-position: center;
+    background-size: cover;
+}
+
+.cadastro-link{
+    display: flex;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*--------------------------------------------Cadastro---------------------------------------------------------*/
+
+.voltar-link{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 500px;
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.container-cad{
+
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0,0.1 );
+    text-align: center;
+    width: 280px;
+    height: auto;
+    padding: 20px;
+
+}
 
 
 img{
@@ -33,11 +80,8 @@ img{
     border-radius: 10px 10px 0 0;
 }
 
-.cadastro-link{
-   
-    gap: 50px;
-}
 
+/*---------------------------------------------pagina_principal----------------------------------------------------------------*/
 
 .container-principal{
 
@@ -50,4 +94,13 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: brown;
+    height: 100%;
 }
+
+.gallery{
+
+    background-color: blue;
+    height: 100%;
+}
+
