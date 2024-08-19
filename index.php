@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {//verefica se o método de requisiça
         if (password_verify($senha, $user['senha'])) { //verifica se a senha que foi digitada é a mesma do banco de dados
 
             $_SESSION['usuario_id'] = $user['id']; //arm,azena as informações id e nome na sessao
-            $_SESSION['usuario_nome'] = $user['nome'];//Armazena o noe do usuario na sessao
+            $_SESSION['usuario_nome'] = $user['nome'];//Armazena o nome do usuario na sessao
 
             header("Location: pagina_principal.php"); // Redireciona para a página principal
             exit; // Encerra o script

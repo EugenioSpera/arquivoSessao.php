@@ -31,21 +31,34 @@ if (!isset($_SESSION['usuario_id'])) {
     <h1>Armazenador de Arquivos:</h1>
 
     <form action="upload_arquivo.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept="file/*" class="file_customizada">
+        <input type="file" name="document" accept="application/pdf" class="file_customizada">
         <button type="submit">Enviar Arquivo</button>
     </form>
 
     </div>
 
     <div class="gallery">
-        <?php
-
-        $files = glob("uploads/*.*");
-        foreach ($files as $file) {
-            echo '<img src="' . $file . '" alt="Imagem">';
-        }
-        ?>
-    </div>
+            <h2>Seus Documentos:</h2>
+            <ul>
+                <?php
+                require 'conexao.php';
+                $user_id = $_SESSION['usuario_id'];
+                $stmt = $conn->prepare("SELECT arquivo FROM arquivo WHERE idUsuario = ?");
+                $stmt->bind_param("i", $user_id);
+                $stmt->execute();
+                $stmt->bind_result($file_path);
+                while ($stmt->fetch()) {
+                    $file_ext = strtolower(pathinfo($file_path, PATHINFO_EXTENSION));
+                    if ($file_ext === 'pdf') {
+                        echo '<li><a href="' . htmlspecialchars($file_path) . '" target="_blank">' . htmlspecialchars(basename($file_path)) . '</a></li>';
+                    } else {
+                        echo '<li>Tipo de arquivo não suportado: ' . htmlspecialchars(basename($file_path)) . '</li>';
+                    }
+                }
+                $stmt->close();
+                ?>
+            </ul>
+        </div>
 
     </div>
 </body>
